@@ -1,0 +1,411 @@
+{
+  "appName": "开发工具集",
+  "categories": {
+    "encode": "编码和加密",
+    "convert": "格式转换",
+    "generate": "生成工具",
+    "dev": "开发工具"
+  },
+  "tools": {
+    "md5": "MD5 加密",
+    "url": "URL 编码",
+    "base64": "Base64 编码",
+    "timestamp": "时间戳转换",
+    "json": "JSON 格式化",
+    "placeholder": "占位图生成",
+    "random": "随机生成器",
+    "git": "Git 工具",
+    "toolkit": "开发工具箱"
+  },
+  "themes": {
+    "blue": "蓝色主题",
+    "green": "绿色主题",
+    "purple": "紫色主题",
+    "orange": "橙色主题",
+    "red": "红色主题"
+  },
+  "common": {
+    "copy": "复制",
+    "copied": "已复制！",
+    "clear": "清除",
+    "encode": "编码",
+    "decode": "解码",
+    "convert": "转换",
+    "format": "格式化",
+    "generate": "生成",
+    "download": "下载"
+  },
+  "error": {
+    "invalidInput": "无效的输入",
+    "invalidJSON": "无效的 JSON 格式",
+    "invalidTimestamp": "无效的时间戳",
+    "invalidDate": "无效的日期格式"
+  },
+  "placeholder": {
+    "md5Input": "请输入要加密的文本...",
+    "md5Result": "MD5 哈希值将显示在这里...",
+    "urlInput": "请输入要编码的文本...",
+    "urlEncoded": "URL 编码结果将显示在这里...",
+    "urlDecoded": "解码结果将显示在这里...",
+    "base64Input": "请输入要编码的文本...",
+    "base64Encoded": "Base64 编码结果将显示在这里...",
+    "base64Decoded": "解码结果将显示在这里...",
+    "jsonInput": "请输入要格式化的 JSON...",
+    "jsonResult": "格式化结果将显示在这里...",
+    "timestampInput": "请输入时间戳或日期...",
+    "timestampResult": "转换结果将显示在这里..."
+  },
+  "url": {
+    "input": "输入文本",
+    "encoded": "URL 编码结果",
+    "decoded": "URL 解码结果"
+  },
+  "base64": {
+    "input": "输入文本",
+    "encoded": "Base64 编码结果",
+    "decoded": "Base64 解码结果"
+  },
+  "timestamp": {
+    "unix": "Unix 时间戳",
+    "datetime": "日期时间",
+    "now": "当前时间",
+    "type": "时间戳类型",
+    "second": "秒",
+    "millisecond": "毫秒"
+  },
+  "json": {
+    "input": "输入 JSON",
+    "result": "格式化结果",
+    "indent": "缩进大小",
+    "format": "格式化",
+    "compact": "压缩"
+  },
+  "placeholder": {
+    "width": "宽度",
+    "height": "高度",
+    "text": "自定义文本",
+    "bgColor": "背景颜色",
+    "textColor": "文字颜色",
+    "preview": "预览",
+    "imageUrl": "图片链接"
+  },
+  "random": {
+    "type": "生成器类型",
+    "number": "数字",
+    "string": "字符串",
+    "min": "最小值",
+    "max": "最大值",
+    "length": "长度",
+    "include": "包含字符",
+    "uppercase": "大写字母",
+    "lowercase": "小写字母",
+    "numbers": "数字",
+    "special": "特殊字符",
+    "generate": "生成",
+    "result": "结果"
+  },
+  "git": {
+    "category": {
+      "basic": "基本命令",
+      "branch": "分支操作",
+      "remote": "远程操作",
+      "advanced": "高级操作",
+      "commit": "提交类型"
+    },
+    "init": "初始化新的 Git 仓库",
+    "clone": "克隆仓库",
+    "addAll": "暂存所有更改",
+    "commit": "提交暂存的更改",
+    "push": "推送提交到远程",
+    "pull": "从远程拉取更改",
+    "status": "显示工作树状态",
+    "log": "显示提交日志",
+    "listBranch": "列出所有分支",
+    "createBranch": "创建新分支",
+    "checkout": "切换分支",
+    "checkoutNew": "创建并切换到新分支",
+    "merge": "合并分支到当前分支",
+    "deleteBranch": "删除分支",
+    "listRemote": "列出远程仓库",
+    "addRemote": "添加远程仓库",
+    "removeRemote": "移除远程仓库",
+    "fetch": "下载远程对象",
+    "pullBranch": "从指定分支拉取",
+    "pushBranch": "推送到指定分支",
+    "resetHard": "重置 HEAD 和工作树",
+    "resetSoft": "仅重置 HEAD",
+    "revert": "还原提交",
+    "stash": "暂存更改",
+    "stashPop": "应用暂存的更改",
+    "cherryPick": "应用其他分支的提交",
+    "commitTypes": {
+      "feat": "新功能",
+      "fix": "修复错误",
+      "docs": "文档更改",
+      "style": "不影响代码含义的更改",
+      "refactor": "既不修复错误也不添加功能的代码更改",
+      "perf": "提高性能的代码更改",
+      "test": "添加或修正测试",
+      "build": "影响构建系统或外部依赖的更改",
+      "ci": "CI 配置文件和脚本的更改",
+      "chore": "不修改 src 或测试文件的其他更改",
+      "revert": "还原之前的提交"
+    }
+  },
+  "toolkit": {
+    "category": {
+      "ide": "编辑器 & IDE",
+      "terminal": "终端工具",
+      "browser": "浏览器工具",
+      "database": "数据库工具",
+      "container": "容器工具",
+      "api": "API 工具",
+      "git": "Git 工具",
+      "productivity": "效率工具"
+    },
+    "ide": {
+      "vscode": "Visual Studio Code",
+      "intellij": "IntelliJ IDEA",
+      "sublime": "Sublime Text",
+      "cursor": "Cursor"
+    },
+    "terminal": {
+      "iterm": "iTerm2",
+      "warp": "Warp"
+    },
+    "browser": {
+      "chrome": "Google Chrome",
+      "firefox": "Firefox",
+      "edge": "Microsoft Edge"
+    },
+    "database": {
+      "dbeaver": "DBeaver",
+      "datagrip": "DataGrip"
+    },
+    "container": {
+      "docker_desktop": "Docker Desktop",
+      "rancher": "Rancher Desktop"
+    },
+    "api": {
+      "postman": "Postman",
+      "insomnia": "Insomnia"
+    },
+    "git": {
+      "sourcetree": "Sourcetree",
+      "gitkraken": "GitKraken"
+    },
+    "productivity": {
+      "raycast": "Raycast",
+      "alfred": "Alfred",
+      "rectangle": "Rectangle"
+    },
+    "description": {
+      "vscode": "轻量级但功能强大的代码编辑器，拥有丰富的插件生态",
+      "intellij": "功能全面的 Java IDE，支持多种编程语言",
+      "sublime": "快速、轻量的文本编辑器",
+      "cursor": "基于 AI 的智能代码编辑器",
+      "iterm": "macOS 上功能强大的终端模拟器",
+      "warp": "现代化的 Rust 终端",
+      "chrome": "Google 开发的网络浏览器",
+      "firefox": "Mozilla 开发的开源浏览器",
+      "edge": "Microsoft 开发的基于 Chromium 的浏览器",
+      "dbeaver": "通用数据库管理工具",
+      "datagrip": "JetBrains 开发的数据库 IDE",
+      "docker_desktop": "Docker 容器管理工具",
+      "rancher": "开源的容器管理平台",
+      "postman": "API 开发和测试工具",
+      "insomnia": "开源的 API 客户端",
+      "sourcetree": "Git 图形界面客户端",
+      "gitkraken": "跨平台的 Git 客户端",
+      "raycast": "macOS 上的效率启动器",
+      "alfred": "macOS 上的效率工具",
+      "rectangle": "macOS 窗口管理工具"
+    }
+  },
+  "shell": {
+    "title": "Shell 工具",
+    "description": "执行常用 Shell 操作",
+    "category": {
+      "file": "文件操作",
+      "directory": "目录操作",
+      "search": "搜索操作",
+      "network": "网络操作",
+      "system": "系统操作"
+    },
+    "file": {
+      "list": "列出文件",
+      "view": "查看文件",
+      "delete": "删除文件",
+      "executable": "设为可执行"
+    },
+    "directory": {
+      "create": "创建目录",
+      "delete": "删除目录",
+      "list": "列出目录",
+      "size": "目录大小"
+    },
+    "search": {
+      "find": "查找文件",
+      "grep": "搜索内容",
+      "locate": "定位文件",
+      "which": "查找命令"
+    },
+    "network": {
+      "ping": "Ping 主机",
+      "curl": "HTTP 请求",
+      "netstat": "网络状态",
+      "lsof": "开放端口"
+    },
+    "system": {
+      "processes": "进程列表",
+      "disk": "磁盘使用",
+      "memory": "内存使用",
+      "info": "系统信息"
+    },
+    "execute": "执行"
+  },
+  "mysql": {
+    "title": "MySQL 工具",
+    "description": "执行常用 MySQL 操作",
+    "category": {
+      "database": "数据库操作",
+      "table": "表操作",
+      "query": "SQL 查询"
+    },
+    "database": {
+      "list": "列出数据库",
+      "create": "创建数据库",
+      "drop": "删除数据库",
+      "use": "使用数据库"
+    },
+    "table": {
+      "list": "列出表",
+      "describe": "描述表结构",
+      "drop": "删除表",
+      "truncate": "清空表"
+    },
+    "query": {
+      "execute": "执行查询"
+    }
+  },
+  "redis": {
+    "title": "Redis 工具",
+    "description": "执行常用 Redis 操作",
+    "category": {
+      "key": "键操作",
+      "list": "列表操作",
+      "server": "服务器操作"
+    },
+    "key": {
+      "set": "设置键",
+      "get": "获取键",
+      "delete": "删除键",
+      "ttl": "获取过期时间",
+      "expire": "设置过期时间"
+    },
+    "list": {
+      "lpush": "左推入",
+      "rpush": "右推入",
+      "range": "获取范围",
+      "length": "获取长度"
+    },
+    "server": {
+      "info": "服务器信息",
+      "monitor": "监控命令",
+      "flushdb": "清空数据库",
+      "save": "保存到磁盘"
+    }
+  },
+  "postgresql": {
+    "title": "PostgreSQL 工具",
+    "description": "执行常用 PostgreSQL 操作",
+    "category": {
+      "database": "数据库操作",
+      "table": "表操作",
+      "query": "SQL 查询"
+    },
+    "database": {
+      "list": "列出数据库",
+      "create": "创建数据库",
+      "drop": "删除数据库",
+      "connect": "连接到数据库"
+    },
+    "table": {
+      "list": "列出表",
+      "describe": "描述表结构",
+      "drop": "删除表",
+      "truncate": "清空表"
+    },
+    "query": {
+      "execute": "执行查询"
+    }
+  },
+  "kafka": {
+    "title": "Kafka 工具",
+    "description": "执行常用 Kafka 操作",
+    "category": {
+      "topic": "主题操作",
+      "consumer": "消费者操作",
+      "producer": "生产者操作",
+      "config": "配置管理"
+    },
+    "topic": {
+      "list": "列出主题",
+      "create": "创建主题",
+      "delete": "删除主题",
+      "describe": "描述主题"
+    },
+    "consumer": {
+      "groups": "列出消费组",
+      "describe": "描述消费组",
+      "reset": "重置偏移量",
+      "lag": "检查延迟"
+    },
+    "producer": {
+      "send": "发送消息",
+      "batch": "批量发送",
+      "performance": "性能测试"
+    },
+    "config": {
+      "brokers": "代理配置",
+      "cluster": "集群信息",
+      "acls": "列出 ACL"
+    }
+  },
+  "nsq": {
+    "title": "NSQ 工具",
+    "description": "执行常用 NSQ 操作",
+    "category": {
+      "topic": "主题操作",
+      "channel": "通道操作",
+      "node": "节点操作"
+    },
+    "topic": {
+      "create": "创建主题",
+      "delete": "删除主题",
+      "empty": "清空主题",
+      "list": "列出主题"
+    },
+    "channel": {
+      "create": "创建通道",
+      "delete": "删除通道",
+      "empty": "清空通道",
+      "list": "列出通道"
+    },
+    "node": {
+      "list": "列出节点",
+      "stats": "节点统计",
+      "ping": "节点检测",
+      "publish": "发布消息"
+    }
+  },
+  "markdown": {
+    "title": "Markdown 转图片",
+    "input": "Markdown 输入",
+    "preview": "预览",
+    "convert": "转换为图片",
+    "converting": "转换中...",
+    "placeholder": "在此输入 Markdown 文本...",
+    "clear": "清空"
+  }
+} 
