@@ -1,0 +1,505 @@
+{
+  "appName": "DevTools Pro",
+  "categories": {
+    "encode": "Encoding & Encryption",
+    "convert": "Conversion",
+    "generate": "Generation",
+    "dev": "Development"
+  },
+  "tools": {
+    "md5": "MD5 Encryption",
+    "url": "URL Encoder",
+    "base64": "Base64 Encoder",
+    "timestamp": "Timestamp Converter",
+    "json": "JSON Formatter",
+    "placeholder": "Placeholder Image",
+    "random": "Random Generator",
+    "git": "Git Tools",
+    "docker": "Docker Tools",
+    "network": "Network Tools",
+    "mysql": "MySQL Tools",
+    "redis": "Redis Tools",
+    "postgresql": "PostgreSQL Tools",
+    "kafka": "Kafka Tools",
+    "nsq": "NSQ Tools",
+    "shell": "Shell Tools",
+    "toolkit": "Dev Toolkit"
+  },
+  "themes": {
+    "blue": "Blue Theme",
+    "green": "Green Theme",
+    "purple": "Purple Theme",
+    "orange": "Orange Theme",
+    "red": "Red Theme"
+  },
+  "common": {
+    "copy": "Copy",
+    "copied": "Copied!",
+    "clear": "Clear",
+    "encode": "Encode",
+    "decode": "Decode",
+    "convert": "Convert",
+    "format": "Format",
+    "generate": "Generate",
+    "download": "Download"
+  },
+  "error": {
+    "invalidInput": "Invalid input",
+    "invalidJSON": "Invalid JSON format",
+    "invalidTimestamp": "Invalid timestamp",
+    "invalidDate": "Invalid date format"
+  },
+  "placeholder": {
+    "md5Input": "Enter text to encrypt...",
+    "md5Result": "MD5 hash will appear here...",
+    "urlInput": "Enter text to encode...",
+    "urlEncoded": "URL encoded text will appear here...",
+    "urlDecoded": "Decoded text will appear here...",
+    "base64Input": "Enter text to encode...",
+    "base64Encoded": "Base64 encoded text will appear here...",
+    "base64Decoded": "Decoded text will appear here...",
+    "jsonInput": "Enter JSON to format...",
+    "jsonResult": "Formatted JSON will appear here...",
+    "timestampInput": "Enter timestamp or date...",
+    "timestampResult": "Conversion result will appear here..."
+  },
+  "url": {
+    "input": "Input Text",
+    "encoded": "URL Encoded",
+    "decoded": "URL Decoded"
+  },
+  "base64": {
+    "input": "Input Text",
+    "encoded": "Base64 Encoded",
+    "decoded": "Base64 Decoded"
+  },
+  "timestamp": {
+    "unix": "Unix Timestamp",
+    "datetime": "Date & Time",
+    "now": "Current Time",
+    "type": "Timestamp Type",
+    "second": "Seconds",
+    "millisecond": "Milliseconds"
+  },
+  "json": {
+    "input": "Input JSON",
+    "result": "Formatted Result",
+    "indent": "Indent Size",
+    "format": "Format",
+    "compact": "Compact"
+  },
+  "placeholder": {
+    "width": "Width",
+    "height": "Height",
+    "text": "Custom Text",
+    "bgColor": "Background Color",
+    "textColor": "Text Color",
+    "preview": "Preview",
+    "imageUrl": "Image URL"
+  },
+  "random": {
+    "type": "Generator Type",
+    "number": "Number",
+    "string": "String",
+    "min": "Minimum",
+    "max": "Maximum",
+    "length": "Length",
+    "include": "Include Characters",
+    "uppercase": "Uppercase",
+    "lowercase": "Lowercase",
+    "numbers": "Numbers",
+    "special": "Special Characters",
+    "generate": "Generate",
+    "result": "Result"
+  },
+  "git": {
+    "category": {
+      "basic": "Basic Commands",
+      "branch": "Branch Operations",
+      "remote": "Remote Operations",
+      "advanced": "Advanced Operations",
+      "commit": "Commit Types"
+    },
+    "init": "Initialize a new Git repository",
+    "clone": "Clone a repository",
+    "addAll": "Stage all changes",
+    "commit": "Commit staged changes",
+    "push": "Push commits to remote",
+    "pull": "Pull changes from remote",
+    "status": "Show working tree status",
+    "log": "Show commit logs",
+    "listBranch": "List all branches",
+    "createBranch": "Create a new branch",
+    "checkout": "Switch to branch",
+    "checkoutNew": "Create and switch to new branch",
+    "merge": "Merge branch into current branch",
+    "deleteBranch": "Delete a branch",
+    "listRemote": "List remote repositories",
+    "addRemote": "Add a remote repository",
+    "removeRemote": "Remove a remote repository",
+    "fetch": "Download objects from remote",
+    "pullBranch": "Pull from specific branch",
+    "pushBranch": "Push to specific branch",
+    "resetHard": "Reset HEAD and working tree",
+    "resetSoft": "Reset HEAD only",
+    "revert": "Revert a commit",
+    "stash": "Stash changes",
+    "stashPop": "Apply stashed changes",
+    "cherryPick": "Apply commit from another branch",
+    "commitTypes": {
+      "feat": "A new feature",
+      "fix": "A bug fix",
+      "docs": "Documentation only changes",
+      "style": "Changes that do not affect the meaning of the code",
+      "refactor": "A code change that neither fixes a bug nor adds a feature",
+      "perf": "A code change that improves performance",
+      "test": "Adding missing tests or correcting existing tests",
+      "build": "Changes that affect the build system or external dependencies",
+      "ci": "Changes to our CI configuration files and scripts",
+      "chore": "Other changes that don't modify src or test files",
+      "revert": "Reverts a previous commit"
+    }
+  },
+  "docker": {
+    "category": {
+      "container": "Container Operations",
+      "image": "Image Operations",
+      "volume": "Volume Operations",
+      "network": "Network Operations"
+    },
+    "container": {
+      "list": "List containers",
+      "start": "Start container",
+      "stop": "Stop container",
+      "remove": "Remove container",
+      "logs": "View container logs",
+      "exec": "Execute command in container",
+      "stats": "Container statistics"
+    },
+    "image": {
+      "list": "List images",
+      "pull": "Pull image",
+      "remove": "Remove image",
+      "build": "Build image",
+      "tag": "Tag image",
+      "push": "Push image"
+    },
+    "volume": {
+      "list": "List volumes",
+      "create": "Create volume",
+      "remove": "Remove volume",
+      "inspect": "Inspect volume"
+    },
+    "network": {
+      "list": "List networks",
+      "create": "Create network",
+      "remove": "Remove network",
+      "connect": "Connect container to network",
+      "disconnect": "Disconnect container from network"
+    }
+  },
+  "network": {
+    "category": {
+      "basic": "Basic Tools",
+      "dns": "DNS Tools",
+      "port": "Port Tools"
+    },
+    "ping": "Ping host",
+    "traceroute": "Trace route",
+    "nslookup": "DNS lookup",
+    "whois": "WHOIS lookup",
+    "portScan": "Port scanner",
+    "checkPort": "Check port status",
+    "ipInfo": "IP information",
+    "speedTest": "Speed test"
+  },
+  "database": {
+    "category": {
+      "basic": "Basic Operations",
+      "table": "Table Operations",
+      "data": "Data Operations",
+      "backup": "Backup & Restore"
+    },
+    "mysql": {
+      "title": "MySQL Tool",
+      "description": "Execute common MySQL operations",
+      "category": {
+        "database": "Database Operations",
+        "table": "Table Operations",
+        "query": "SQL Query"
+      },
+      "database": {
+        "list": "List Databases",
+        "create": "Create Database",
+        "drop": "Drop Database",
+        "use": "Use Database"
+      },
+      "table": {
+        "list": "List Tables",
+        "describe": "Describe Table",
+        "drop": "Drop Table",
+        "truncate": "Truncate Table"
+      },
+      "query": {
+        "execute": "Execute Query"
+      }
+    },
+    "redis": {
+      "connect": "Connect to server",
+      "keys": "List keys",
+      "get": "Get value",
+      "set": "Set value",
+      "del": "Delete key",
+      "ttl": "Get TTL",
+      "expire": "Set expiry",
+      "type": "Get type",
+      "info": "Server info",
+      "monitor": "Monitor commands",
+      "flushdb": "Flush database",
+      "save": "Save to disk"
+    },
+    "postgresql": {
+      "title": "PostgreSQL Tool",
+      "description": "Execute common PostgreSQL operations",
+      "category": {
+        "database": "Database Operations",
+        "table": "Table Operations",
+        "query": "SQL Query"
+      },
+      "database": {
+        "list": "List Databases",
+        "create": "Create Database",
+        "drop": "Drop Database",
+        "connect": "Connect to Database"
+      },
+      "table": {
+        "list": "List Tables",
+        "describe": "Describe Table",
+        "drop": "Drop Table",
+        "truncate": "Truncate Table"
+      },
+      "query": {
+        "execute": "Execute Query"
+      }
+    }
+  },
+  "kafka": {
+    "title": "Kafka Tool",
+    "description": "Execute common Kafka operations",
+    "category": {
+      "topic": "Topic Operations",
+      "consumer": "Consumer Operations",
+      "producer": "Producer Operations",
+      "config": "Configuration"
+    },
+    "topic": {
+      "list": "List Topics",
+      "create": "Create Topic",
+      "delete": "Delete Topic",
+      "describe": "Describe Topic"
+    },
+    "consumer": {
+      "groups": "List Groups",
+      "describe": "Describe Group",
+      "reset": "Reset Offsets",
+      "lag": "Check Lag"
+    },
+    "producer": {
+      "send": "Send Message",
+      "batch": "Batch Producer",
+      "performance": "Performance Test"
+    },
+    "config": {
+      "brokers": "Broker Config",
+      "cluster": "Cluster Info",
+      "acls": "List ACLs"
+    }
+  },
+  "nsq": {
+    "title": "NSQ Tool",
+    "description": "Execute common NSQ operations",
+    "category": {
+      "topic": "Topic Operations",
+      "channel": "Channel Operations",
+      "node": "Node Operations"
+    },
+    "topic": {
+      "create": "Create Topic",
+      "delete": "Delete Topic",
+      "empty": "Empty Topic",
+      "list": "List Topics"
+    },
+    "channel": {
+      "create": "Create Channel",
+      "delete": "Delete Channel",
+      "empty": "Empty Channel",
+      "list": "List Channels"
+    },
+    "node": {
+      "list": "List Nodes",
+      "stats": "Node Stats",
+      "ping": "Ping Node",
+      "publish": "Publish Message"
+    }
+  },
+  "shell": {
+    "title": "Shell Tool",
+    "description": "Execute common shell operations",
+    "category": {
+      "file": "File Operations",
+      "directory": "Directory Operations",
+      "search": "Search Operations",
+      "network": "Network Operations",
+      "system": "System Operations"
+    },
+    "file": {
+      "list": "List Files",
+      "view": "View File",
+      "delete": "Delete File",
+      "executable": "Make Executable"
+    },
+    "directory": {
+      "create": "Create Directory",
+      "delete": "Delete Directory",
+      "list": "List Directory",
+      "size": "Directory Size"
+    },
+    "search": {
+      "find": "Find Files",
+      "grep": "Search Content",
+      "locate": "Locate Files",
+      "which": "Find Command"
+    },
+    "network": {
+      "ping": "Ping Host",
+      "curl": "HTTP Request",
+      "netstat": "Network Status",
+      "lsof": "Open Ports"
+    },
+    "system": {
+      "processes": "Process List",
+      "disk": "Disk Usage",
+      "memory": "Memory Usage",
+      "info": "System Info"
+    },
+    "execute": "Execute"
+  },
+  "toolkit": {
+    "category": {
+      "ide": "IDE & Editors",
+      "terminal": "Terminal Tools",
+      "browser": "Browser Tools",
+      "database": "Database Tools",
+      "container": "Container Tools",
+      "api": "API Tools",
+      "git": "Git Tools",
+      "productivity": "Productivity"
+    },
+    "ide": {
+      "vscode": "Visual Studio Code",
+      "intellij": "IntelliJ IDEA",
+      "sublime": "Sublime Text",
+      "vim": "Vim/Neovim",
+      "cursor": "Cursor Editor"
+    },
+    "terminal": {
+      "iterm": "iTerm2",
+      "warp": "Warp Terminal",
+      "tmux": "Tmux",
+      "oh_my_zsh": "Oh My Zsh",
+      "starship": "Starship Prompt"
+    },
+    "browser": {
+      "chrome": "Chrome DevTools",
+      "postman": "Postman",
+      "react": "React DevTools",
+      "redux": "Redux DevTools",
+      "lighthouse": "Lighthouse"
+    },
+    "database": {
+      "dbeaver": "DBeaver",
+      "datagrip": "DataGrip",
+      "mycli": "MyCLI",
+      "pgcli": "pgcli",
+      "mongosh": "MongoDB Shell"
+    },
+    "container": {
+      "docker_desktop": "Docker Desktop",
+      "rancher": "Rancher Desktop",
+      "lens": "Lens Kubernetes",
+      "k9s": "K9s",
+      "portainer": "Portainer"
+    },
+    "api": {
+      "postman": "Postman",
+      "insomnia": "Insomnia",
+      "swagger": "Swagger UI",
+      "httpie": "HTTPie",
+      "curl": "cURL"
+    },
+    "git": {
+      "sourcetree": "Sourcetree",
+      "gitkraken": "GitKraken",
+      "lazygit": "LazyGit",
+      "gh": "GitHub CLI",
+      "delta": "Delta"
+    },
+    "productivity": {
+      "raycast": "Raycast",
+      "alfred": "Alfred",
+      "rectangle": "Rectangle",
+      "notion": "Notion",
+      "obsidian": "Obsidian"
+    },
+    "description": {
+      "vscode": "Popular code editor with rich extensions",
+      "intellij": "Powerful IDE for Java and other languages",
+      "sublime": "Fast and lightweight text editor",
+      "vim": "Highly configurable terminal editor",
+      "cursor": "AI-powered code editor",
+      "iterm": "Terminal emulator for macOS",
+      "warp": "Modern terminal with AI features",
+      "tmux": "Terminal multiplexer",
+      "oh_my_zsh": "Framework for zsh configuration",
+      "starship": "Minimal and fast shell prompt",
+      "chrome": "Built-in browser developer tools",
+      "postman": "API development environment",
+      "react": "React debugging tools",
+      "redux": "Redux state debugging",
+      "lighthouse": "Web performance testing",
+      "dbeaver": "Universal database tool",
+      "datagrip": "Database IDE by JetBrains",
+      "mycli": "CLI for MySQL with auto-completion",
+      "pgcli": "CLI for PostgreSQL with auto-completion",
+      "mongosh": "Official MongoDB Shell",
+      "docker_desktop": "Docker GUI for desktop",
+      "rancher": "Container management platform",
+      "lens": "Kubernetes IDE",
+      "k9s": "Terminal UI for Kubernetes",
+      "portainer": "Container management UI",
+      "insomnia": "REST and GraphQL client",
+      "swagger": "API documentation and testing",
+      "httpie": "User-friendly HTTP client",
+      "curl": "Command-line HTTP client",
+      "sourcetree": "Git GUI by Atlassian",
+      "gitkraken": "Git GUI with visual commit graph",
+      "lazygit": "Terminal UI for git commands",
+      "gh": "GitHub official CLI tool",
+      "delta": "Syntax-highlighting pager for git",
+      "raycast": "Productivity tool with extensions",
+      "alfred": "Productivity app for macOS",
+      "rectangle": "Window management for macOS",
+      "notion": "All-in-one workspace",
+      "obsidian": "Knowledge base with markdown"
+    }
+  },
+  "markdown": {
+    "title": "Markdown to Image",
+    "input": "Markdown Input",
+    "preview": "Preview",
+    "convert": "Convert to Image",
+    "converting": "Converting...",
+    "placeholder": "Enter your markdown text here...",
+    "clear": "Clear"
+  }
+} 
