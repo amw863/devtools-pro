@@ -1,130 +1,114 @@
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { FaCopy, FaTrash, FaCompress, FaExpand, FaQuoteRight } from 'react-icons/fa'
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { FaCopy, FaTrash, FaCompress, FaExpand, FaQuoteRight } from 'react-icons/fa';
 
 const JSONTool = () => {
-  const { t } = useTranslation()
-  const [input, setInput] = useState('')
-  const [result, setResult] = useState('')
-  const [error, setError] = useState('')
-  const [copied, setCopied] = useState(false)
-  const [indentSize, setIndentSize] = useState(2)
+  const { t } = useTranslation();
+  const [input, setInput] = useState('');
+  const [result, setResult] = useState('');
+  const [error, setError] = useState('');
+  const [copied, setCopied] = useState(false);
+  const [indentSize, setIndentSize] = useState(2);
 
   const formatJSON = (json: string, compact = false) => {
     try {
-      const parsed = JSON.parse(json)
-      return JSON.stringify(parsed, null, compact ? 0 : indentSize)
+      const parsed = JSON.parse(json);
+      return JSON.stringify(parsed, null, compact ? 0 : indentSize);
     } catch (err) {
       if (err instanceof Error) {
-        throw new Error(err.message)
+        throw new Error(err.message);
       }
-      throw new Error('Invalid JSON')
+      throw new Error('Invalid JSON');
     }
-  }
+  };
 
   const unescapeJSON = (json: string) => {
     try {
-      // 先尝试解析，确保是有效的 JSON
-      JSON.parse(json)
-      // 移除转义字符
-      return json.replace(/\\"/g, '"')
+      // 直接移除转义字符，不需要先验证 JSON
+      return json
+        .replace(/\\"/g, '"')
         .replace(/\\\\/g, '\\')
         .replace(/\\n/g, '\n')
         .replace(/\\r/g, '\r')
         .replace(/\\t/g, '\t')
         .replace(/\\b/g, '\b')
-        .replace(/\\f/g, '\f')
+        .replace(/\\f/g, '\f');
     } catch (err) {
       if (err instanceof Error) {
-        throw new Error(err.message)
+        throw new Error(err.message);
       }
-      throw new Error('Invalid JSON')
+      throw new Error('Invalid JSON');
     }
-  }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const value = e.target.value
-    setInput(value)
-    if (value) {
-      try {
-        const formatted = formatJSON(value)
-        setResult(formatted)
-        setError('')
-      } catch (err) {
-        if (err instanceof Error) {
-          setError(err.message)
-        } else {
-          setError(t('error.invalidJSON'))
-        }
-        setResult('')
-      }
-    } else {
-      setResult('')
-      setError('')
-    }
-  }
+    const value = e.target.value;
+    setInput(value);
+    // 清除之前的错误
+    setError('');
+  };
 
   const handleCompact = () => {
     if (input) {
       try {
-        const formatted = formatJSON(input, true)
-        setResult(formatted)
-        setError('')
+        const formatted = formatJSON(input, true);
+        setResult(formatted);
+        setError('');
       } catch (err) {
         if (err instanceof Error) {
-          setError(err.message)
+          setError(err.message);
         } else {
-          setError(t('error.invalidJSON'))
+          setError(t('error.invalidJSON'));
         }
       }
     }
-  }
+  };
 
   const handleFormat = () => {
     if (input) {
       try {
-        const formatted = formatJSON(input, false)
-        setResult(formatted)
-        setError('')
+        const formatted = formatJSON(input, false);
+        setResult(formatted);
+        setError('');
       } catch (err) {
         if (err instanceof Error) {
-          setError(err.message)
+          setError(err.message);
         } else {
-          setError(t('error.invalidJSON'))
+          setError(t('error.invalidJSON'));
         }
       }
     }
-  }
+  };
 
   const handleUnescape = () => {
     if (input) {
       try {
-        const unescaped = unescapeJSON(input)
-        setResult(unescaped)
-        setError('')
+        const unescaped = unescapeJSON(input);
+        setResult(unescaped);
+        setError('');
       } catch (err) {
         if (err instanceof Error) {
-          setError(err.message)
+          setError(err.message);
         } else {
-          setError(t('error.invalidJSON'))
+          setError(t('error.invalidJSON'));
         }
       }
     }
-  }
+  };
 
   const handleClear = () => {
-    setInput('')
-    setResult('')
-    setError('')
-  }
+    setInput('');
+    setResult('');
+    setError('');
+  };
 
   const handleCopy = async () => {
     if (result) {
-      await navigator.clipboard.writeText(result)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      await navigator.clipboard.writeText(result);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
-  }
+  };
 
   return (
     <div className="space-y-4">
@@ -138,7 +122,7 @@ const JSONTool = () => {
               {t('json.indent')}:
               <select
                 value={indentSize}
-                onChange={(e) => setIndentSize(Number(e.target.value))}
+                onChange={e => setIndentSize(Number(e.target.value))}
                 className="ml-2 input !w-20"
               >
                 <option value="2">2</option>
@@ -152,8 +136,8 @@ const JSONTool = () => {
           id="input"
           value={input}
           onChange={handleInputChange}
-          className="input min-h-[200px]"
-          placeholder="Enter JSON to format..."
+          className="input min-h-[200px] font-mono"
+          placeholder={t('json.placeholder')}
         />
       </div>
 
@@ -197,7 +181,7 @@ const JSONTool = () => {
             value={result}
             readOnly
             className="input min-h-[200px] font-mono text-sm"
-            placeholder="Formatted JSON will appear here..."
+            placeholder={t('json.resultPlaceholder')}
           />
           <div className="absolute right-2 top-2 flex gap-2">
             {result && (
@@ -222,13 +206,9 @@ const JSONTool = () => {
         </div>
       </div>
 
-      {copied && (
-        <div className="text-sm text-green-600 animate-fade-in">
-          {t('common.copied')}
-        </div>
-      )}
+      {copied && <div className="text-sm text-green-600 animate-fade-in">{t('common.copied')}</div>}
     </div>
-  )
-}
+  );
+};
 
-export default JSONTool 
+export default JSONTool;

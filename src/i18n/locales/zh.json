@@ -78,7 +78,8 @@
     "result": "格式化结果",
     "indent": "缩进大小",
     "format": "格式化",
-    "compact": "压缩"
+    "compact": "压缩",
+    "unescape": "去除转义"
   },
   "placeholder": {
     "width": "宽度",
