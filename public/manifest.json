@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DevTools Pro",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A powerful collection of development tools for developers, featuring multi-theme support and bilingual interface (English/Chinese). Includes tools for MD5 encryption, URL encoding, JSON formatting, timestamp conversion, QR code generation, and more.",
   "icons": {
     "16": "icons/icon16.png",
