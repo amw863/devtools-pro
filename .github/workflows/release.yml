@@ -21,7 +21,12 @@ jobs:
         run: npm ci
 
       - name: Build extension
-        run: npm run build:extension
+        run: npm run build
+
+      - name: Create ZIP file
+        run: |
+          cd dist
+          zip -r ../dist.zip .
 
       - name: Create Release
         id: create_release
@@ -42,9 +47,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./dist.zip
           asset_name: devtools-pro.zip
-          asset_content_type: application/zip
-
-      - name: Create ZIP file
-        run: |
-          cd dist
-          zip -r ../dist.zip . 
+          asset_content_type: application/zip 
