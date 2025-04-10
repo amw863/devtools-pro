@@ -1,66 +1,67 @@
-import { useState, useEffect, useRef } from 'react'
-import { useTranslation } from 'react-i18next'
-import { FaDownload } from 'react-icons/fa'
+import { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import { FaDownload } from 'react-icons/fa';
 
 const PlaceholderTool = () => {
-  const { t } = useTranslation()
-  const [width, setWidth] = useState('300')
-  const [height, setHeight] = useState('200')
-  const [text, setText] = useState('')
-  const [bgColor, setBgColor] = useState('#cccccc')
-  const [textColor, setTextColor] = useState('#333333')
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const { t } = useTranslation();
+  const [width, setWidth] = useState('300');
+  const [height, setHeight] = useState('200');
+  const [text, setText] = useState('');
+  const [bgColor, setBgColor] = useState('#cccccc');
+  const [textColor, setTextColor] = useState('#333333');
+  const [format, setFormat] = useState('png');
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const generatePlaceholder = () => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
 
     // 设置画布尺寸
-    canvas.width = parseInt(width)
-    canvas.height = parseInt(height)
+    canvas.width = parseInt(width);
+    canvas.height = parseInt(height);
 
     // 绘制背景
-    ctx.fillStyle = bgColor
-    ctx.fillRect(0, 0, canvas.width, canvas.height)
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // 绘制文字
-    const displayText = text || `${width}x${height}`
-    ctx.fillStyle = textColor
-    ctx.textAlign = 'center'
-    ctx.textBaseline = 'middle'
-    
+    const displayText = text || `${width}x${height}`;
+    ctx.fillStyle = textColor;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
     // 自动调整字体大小
-    let fontSize = Math.min(canvas.width, canvas.height) / 10
-    ctx.font = `${fontSize}px Arial`
-    let textWidth = ctx.measureText(displayText).width
-    
+    let fontSize = Math.min(canvas.width, canvas.height) / 10;
+    ctx.font = `${fontSize}px Arial`;
+    let textWidth = ctx.measureText(displayText).width;
+
     // 如果文字太大，逐步减小字体大小
     while (textWidth > canvas.width * 0.8 && fontSize > 10) {
-      fontSize--
-      ctx.font = `${fontSize}px Arial`
-      textWidth = ctx.measureText(displayText).width
+      fontSize--;
+      ctx.font = `${fontSize}px Arial`;
+      textWidth = ctx.measureText(displayText).width;
     }
 
-    ctx.fillText(displayText, canvas.width / 2, canvas.height / 2)
-  }
+    ctx.fillText(displayText, canvas.width / 2, canvas.height / 2);
+  };
 
   useEffect(() => {
-    generatePlaceholder()
-  }, [width, height, text, bgColor, textColor])
+    generatePlaceholder();
+  }, [width, height, text, bgColor, textColor]);
 
   const handleDownload = () => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
     // 创建下载链接
-    const link = document.createElement('a')
-    link.download = `placeholder-${width}x${height}.png`
-    link.href = canvas.toDataURL('image/png')
-    link.click()
-  }
+    const link = document.createElement('a');
+    link.download = `placeholder-${width}x${height}.${format}`;
+    link.href = canvas.toDataURL(`image/${format}`);
+    link.click();
+  };
 
   return (
     <div className="space-y-4">
@@ -73,7 +74,7 @@ const PlaceholderTool = () => {
             id="width"
             type="number"
             value={width}
-            onChange={(e) => setWidth(e.target.value)}
+            onChange={e => setWidth(e.target.value)}
             className="input"
             min="1"
             max="2000"
@@ -87,7 +88,7 @@ const PlaceholderTool = () => {
             id="height"
             type="number"
             value={height}
-            onChange={(e) => setHeight(e.target.value)}
+            onChange={e => setHeight(e.target.value)}
             className="input"
             min="1"
             max="2000"
@@ -103,7 +104,7 @@ const PlaceholderTool = () => {
           id="text"
           type="text"
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={e => setText(e.target.value)}
           className="input"
           placeholder={`${width}x${height}`}
         />
@@ -119,13 +120,13 @@ const PlaceholderTool = () => {
               id="bgColor"
               type="color"
               value={bgColor}
-              onChange={(e) => setBgColor(e.target.value)}
+              onChange={e => setBgColor(e.target.value)}
               className="w-10 h-10 rounded-md cursor-pointer"
             />
             <input
               type="text"
               value={bgColor}
-              onChange={(e) => setBgColor(e.target.value)}
+              onChange={e => setBgColor(e.target.value)}
               className="input"
               pattern="^#[0-9A-Fa-f]{6}$"
             />
@@ -140,18 +141,34 @@ const PlaceholderTool = () => {
               id="textColor"
               type="color"
               value={textColor}
-              onChange={(e) => setTextColor(e.target.value)}
+              onChange={e => setTextColor(e.target.value)}
               className="w-10 h-10 rounded-md cursor-pointer"
             />
             <input
               type="text"
               value={textColor}
-              onChange={(e) => setTextColor(e.target.value)}
+              onChange={e => setTextColor(e.target.value)}
               className="input"
               pattern="^#[0-9A-Fa-f]{6}$"
             />
           </div>
         </div>
+      </div>
+
+      <div>
+        <label htmlFor="format" className="block text-sm font-medium text-gray-700 mb-1">
+          {t('placeholder.format')}
+        </label>
+        <select
+          id="format"
+          value={format}
+          onChange={e => setFormat(e.target.value)}
+          className="input"
+        >
+          <option value="png">PNG</option>
+          <option value="jpeg">JPEG</option>
+          <option value="jpg">JPG</option>
+        </select>
       </div>
 
       <div className="border rounded-lg p-4 bg-gray-50">
@@ -166,14 +183,11 @@ const PlaceholderTool = () => {
           </button>
         </div>
         <div className="flex justify-center">
-          <canvas
-            ref={canvasRef}
-            className="max-w-full h-auto shadow-md rounded"
-          />
+          <canvas ref={canvasRef} className="max-w-full h-auto shadow-md rounded" />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PlaceholderTool 
+export default PlaceholderTool;
